@@ -1,6 +1,7 @@
 .nav-list {
   display: flex;
   gap: 40px;
+  /* justify-content: center; */
 }
 
 .nav-link {
