@@ -12,8 +12,8 @@ inputEmail.value = storedData.email || '';
 inputMessage.value = storedData.message || '';
 
 function formHandleInput() {
-  const email = inputEmail.value;
-  const message = inputMessage.value;
+  const email = inputEmail.value.trim();
+  const message = inputMessage.value.trim();
 
   const inputData = JSON.stringify({ email, message });
   localStorage.setItem(STORAGE_KEY, inputData);
@@ -22,8 +22,8 @@ function formHandleInput() {
 function formHandleSubmit(event) {
   event.preventDefault();
 
-  const email = inputEmail.value;
-  const message = inputMessage.value;
+  const email = inputEmail.value.trim();
+  const message = inputMessage.value.trim();
 
   if (email && message) {
     const formData = {
